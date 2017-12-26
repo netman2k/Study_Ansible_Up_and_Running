@@ -16,15 +16,11 @@ Vagrant.configure('2') do |config|
     config.vm.box = 'centos/7'
   end
 
+  config.ssh.insert_key = false
+
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
   config.hostmanager.manage_guest = true
-
-  config.vm.define :server do |server|
-    server.vm.hostname = 'server'
-    server.vm.network :private_network, :ip => '10.0.5.2'
-    server.vm.provision "shell", inline: $script
-  end
 
   config.vm.define :edge1 do |server|
     server.vm.hostname = 'node1'
