@@ -1,0 +1,25 @@
+---
+- name: Configure webserver with nginx
+  hosts: webservers
+  become: True
+  tasks:
+    - name: install epel
+      yum: name=epel-release update_cache=yes
+
+    - name: install nginx
+      yum: name=nginx
+
+    - name: copy nginx config file
+      copy: src=files/nginx.conf dest=/etc/nginx/default.d/default
+    
+    - name: enable configuration
+      file: >
+        dest=/etc/nginx/conf.d/default
+        src=/etc/nginx/default.d/default
+        state=link
+
+    - name: copy index.html
+      template: src=templates/index.html.j2 dest=/usr/share/nginx/html/index.html mode=0644
+
+    - name: restart nginx
+      service: name=nginx state=restarted

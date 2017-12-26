@@ -1,0 +1,4 @@
+testserver ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user=vagrant ansible_ssh_private_key_file=/home/daehyung/Vagrant/Testing/Ansible_UpandRunning/.vagrant/machines/server/virtualbox/private_key
+
+[webservers]
+edge1 ansible_host=127.0.0.1 ansible_port=2200 ansible_ssh_private_key_file=/home/daehyung/Vagrant/Testing/Ansible_UpandRunning/.vagrant/machines/edge1/virtualbox/private_key
