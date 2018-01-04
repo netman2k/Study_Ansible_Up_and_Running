@@ -1,0 +1,3 @@
+[submodule "github_ansiblebook"]
+	path = ansiblebook
+	url = https://github.com/ansiblebook/ansiblebook.git
