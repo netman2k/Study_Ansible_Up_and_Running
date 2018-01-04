@@ -3,6 +3,11 @@
 > It is my code for studying ansible up and running book.
 > mainly, I tested it on CentOS 7 OS not ubuntu.
 
+## Source code
+[ansiblebook/ansiblebook](https://github.com/ansiblebook/ansiblebook)
+```
+git clone https://github.com/ansiblebook/ansiblebook.git
+```
 ## Using Dynamic inventory
 ### Check working
 ```
