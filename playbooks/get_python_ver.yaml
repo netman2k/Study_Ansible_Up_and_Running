@@ -1,0 +1,4 @@
+- name: get python version
+  hosts: all
+  tasks:
+    - debug: var=ansible_python_version

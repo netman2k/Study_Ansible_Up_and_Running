@@ -1,0 +1,5 @@
+- name: Get hostvars
+  hosts: all
+  tasks:
+    - debug: var=hostvars
+
